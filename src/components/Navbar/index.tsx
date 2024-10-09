@@ -1,6 +1,6 @@
-import style from './Base.module.scss';
+import style from './Navbar.module.scss';
 
-export default function Base() {
+export default function Navbar() {
   return (
     <>
       <nav className={style.nav}>
