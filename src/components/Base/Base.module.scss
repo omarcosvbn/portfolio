@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sanchez&display=swap");
+@import "../../styles/reset.scss";
+
+.syncopate {
+  // <weight>: 400 or 700
+  font-family: "Syncopate", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.sanchez-regular {
+  font-family: "Sanchez", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.nav {
+  font-family: "Syncopate";
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #1e1e1e;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 100px 25px 100px;
+
+  &__pages {
+    display: flex;
+    gap: 50px;
+  }
+}
