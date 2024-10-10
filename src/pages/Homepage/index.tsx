@@ -1,10 +1,18 @@
-import Navbar from '../../components/Navbar';
-import style from './Homepage.module.scss';
+import Theme from "../../components/Theme";
+import style from "./Homepage.module.scss";
 
 export default function Homepage() {
   return (
     <>
-      <Navbar /> 
+      <Theme />
+      <div className={style.test}>
+        <p className={style.test__space}>a</p>
+        <p className={style.test__space}>a</p>
+        <p className={style.test__space}>a</p>
+        <p className={style.test__space}>a</p>
+        <p className={style.test__space}>a</p>
+        <p className={style.test__space}>a</p>
+      </div>
     </>
   );
 }

@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Sanchez&display=swap");
+
+.test {
+  margin-top: -50vh;
+  width: 100%;
+  text-align: center;
+
+  font-family: "Sanchez";
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: red;
+
+  z-index: 0;
+
+  &__space {
+    margin-bottom: 200px;
+  }
+}
