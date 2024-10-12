@@ -1,18 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Sanchez&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap");
 
-.test {
-  margin-top: -50vh;
-  width: 100%;
-  text-align: center;
-
-  font-family: "Sanchez";
-  font-weight: 400;
-  font-size: 2.5rem;
-  color: red;
-
+body {
   z-index: 0;
+}
 
-  &__space {
-    margin-bottom: 200px;
-  }
+
+.type {
+  font-family: "Syncopate", sans-serif;
+  font-weight: 700;
+  font-size: 8rem;
+  color: #1e1e1e;
+
+  position: absolute; /* Absolute positioning */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset to center */
+  z-index: -1;
+}
+
+.arrow {
+  position: absolute; /* Make sure it's positioned absolutely */
+  z-index: -1;
 }

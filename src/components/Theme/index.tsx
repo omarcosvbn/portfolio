@@ -4,7 +4,9 @@ export default function Theme() {
   return (
     <div className={style.theme}>
       <nav className={style.nav}>
-        <a>/\/\/\/</a>
+        <div className={style.nav__pages}>
+          <a>/\/\/\/</a>
+        </div>
         <div className={style.nav__pages}>
           <a>About</a>
           <a>Skills</a>
