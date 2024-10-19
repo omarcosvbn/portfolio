@@ -2,37 +2,62 @@
 @import url("https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap");
 
 .thirds {
-  width: 100vw;
-  height: 100vh;
+  &__first {
+    margin-top: -100vh;
+    width: 100vw;
+    height: 100vh;
 
-  background-color: #fafafa;
-  color: #1e1e1e;
+    background-color: #fafafa;
+    color: #1e1e1e;
 
-  display: flex;
-  flex-direction: column; /* Stack children vertically */
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
-  
-  z-index: 0;
-  
-  &__first{
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
 
+    z-index: 0;
     &__hi {
       font-family: "Sanchez", serif;
       font-weight: 400;
       font-size: 2rem;
       margin-left: -30rem;
     }
-  
+
     &__name {
       font-family: "Syncopate", sans-serif;
       font-weight: 700;
       font-size: 8rem;
     }
   }
-  
-  &__arrow {
-    
+
+  &__second {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #fafafa;
+    color: #1e1e1e;
+
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+
+    z-index: 0;
+    &__arrow {
+    }
+  }
+  &__third {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #fafafa;
+    color: #1e1e1e;
+
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+
+    z-index: 0;
   }
 }
-
