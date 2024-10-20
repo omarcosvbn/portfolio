@@ -8,11 +8,9 @@
 
   display: flex;
   justify-content: space-between;
-  padding: 40px 100px 25px 100px;
+  padding: 50px 100px 25px 100px;
 
   white-space: nowrap;
-
-  z-index: 1;
 
   &__pages {
     display: flex;
@@ -22,18 +20,20 @@
 
 .main {
   width: calc(100vw - 100px);
-  height: calc(100vh - 153px);
-  margin: 0 50px 40px 50px;
+  height: calc(100vh - 163px);
+  margin: 0 50px 50px 50px;
   box-sizing: border-box;
   border: solid;
-  border-width: 4px 4px 4px 0px;
-  border-radius: 0 50px 50px 0;
-  box-shadow: inset -10px 10px 4px rgba(0, 0, 0, 0.25), 0 50px 0 0 #fafafa,
-    0 -200px 0 0 #fafafa;
-  z-index: 1;
+  border-width: 4px 4px 4px 4px;
+  border-radius: 50px 50px 50px 50px;
+  box-shadow: 
+    inset -10px 10px 4px rgba(0, 0, 0, 0.25), // Existing top left inset shadow
+    0 50px 0 0 #fafafa,
+    0 -157px 0 0 #fafafa;
 }
 
 .theme {
   position: sticky;
-  top: 0;
+  top: 0; // Keeps the theme at the top of the viewport
+  z-index: 10;
 }

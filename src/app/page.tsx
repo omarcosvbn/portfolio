@@ -12,11 +12,12 @@ export default function Home() {
           <h1 className={style.thirds__first__hi}>Hello, my name is</h1>
           <TypeAnimation
             className={style.thirds__first__name}
-            sequence={["Marcos"]}
+            sequence={["Matcos", 200, "Marcos"]}
             speed={{
               type: "keyStrokeDelayInMs",
-              value: 150,
+              value: 250,
             }}
+            preRenderFirstString={true}
           />
         </div>
 
