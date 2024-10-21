@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Sanchez&display=swap");
+
+.text {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fafafa;
+  color: #1e1e1e;
+
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center vertically */
+  gap: 50px;
+
+  font-family: "Sanchez", serif;
+  font-weight: 400;
+  font-size: 2rem;
+  margin: -100vh auto;
+  padding: 0 50vw 0 10vw;
+}
+
+.span{
+    color:red;
+}

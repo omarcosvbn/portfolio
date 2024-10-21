@@ -10,8 +10,8 @@ export default function Theme() {
         </Link>
         <div className={style.nav__pages}>
           <Link href="../about">About</Link>
-          <Link href="../about">Skills</Link>
-          <Link href="../about">Contacts</Link>
+          <Link href="../skills">Skills</Link>
+          <Link href="../contacts">Contacts</Link>
         </div>
       </nav>
       <div className={style.main} />
