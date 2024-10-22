@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import "../styles/Home.module.scss";
+import Overlay from "../components/Overlay/Overlay";
 
 export default function RootLayout({ children }: any) {
   return (
@@ -13,7 +14,10 @@ export default function RootLayout({ children }: any) {
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <Overlay />
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
