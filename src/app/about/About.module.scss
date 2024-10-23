@@ -14,8 +14,18 @@
   font-size: 2rem;
   margin: -100vh auto;
   padding: 0 50vw 0 10vw;
+
+  
 }
 
 .span{
-    color:red;
+  font-weight: 500;
+}
+
+.box{
+  padding: 2vw;
+  border: solid;
+  border-width: 4px 4px 4px 4px;
+  border-radius: 50px 50px 50px 50px;
+  box-shadow: -10px 10px 4px rgba(0, 0, 0, 0.25);
 }

@@ -1,0 +1,18 @@
+.links {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fafafa;
+
+  display: flex;
+  justify-content: center;
+  gap: 5vw;
+
+  //margin: -100vh auto;
+  //padding: 0 10vw 0 10vw;
+
+  &__image{
+      width: 5vw;
+      height: 5vw;
+  }
+}
+
