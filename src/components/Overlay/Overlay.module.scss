@@ -34,7 +34,7 @@
 }
 
 .theme {
-  position: sticky;
+  position: fixed;
   top: 0; // Keeps the theme at the top of the viewport
   z-index: 10;
 }

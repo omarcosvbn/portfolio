@@ -1,17 +1,17 @@
 import Image from "next/image";
-import style from "./Contacts.module.scss";
+import styles from "./Contacts.module.scss";
 
 export default function Contacts() {
   return (
-    <div className={style.links}>
-      <div className={style.links__contacts}>
+    <div className={styles.links}>
+      <div className={styles.links__contacts}>
         <a
           href="mailto:omarcosvbn@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >
           <Image
-            className={style.links__image}
+            className={styles.links__image}
             src="/images/email.png"
             alt="Email"
             width={100}
@@ -20,14 +20,14 @@ export default function Contacts() {
         </a>
         <h2>omarcosvbn@gmail.com</h2>
       </div>
-      <div className={style.links__contacts}>
+      <div className={styles.links__contacts}>
         <a
           href="https://www.linkedin.com/in/marcos-bnascimento/"
           target="_blank"
           rel="noopener noreferrer"
         >
           <Image
-            className={style.links__image}
+            className={styles.links__image}
             src="/images/linkedin.png"
             alt="LinkedIn"
             width={100}
