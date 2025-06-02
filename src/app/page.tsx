@@ -13,17 +13,16 @@ export default function Home() {
     <div className={styles.page}>
       <div className={`${outfit.className} ${styles.home}`}>
         <div className={styles.home__hi}>
-          <div className={styles.home__hi__title}>
-            <picture>
-              <source media="(max-width: 768px)" srcSet="/hi/hi-mobile.svg" />
-              <source media="(max-width: 1440px)" srcSet="/hi/hi-tablet.svg" />
-              <img
-                src="/hi/hi-pc.svg"
-                alt="Hi, I am Marcos"
+          <picture>
+            <source media="(max-width: 768px)" srcSet="/hi/hi-mobile.svg" />
+            <source media="(max-width: 1440px)" srcSet="/hi/hi-tablet.svg" />
+            <img
+              src="/hi/hi-pc.svg"
+              alt="Hi, I am Marcos"
+              className={styles.home__hi__title}
+            />
+          </picture>
 
-              />
-            </picture>
-          </div>
           <HomeButton
             label="projects"
             link1="case studies"
