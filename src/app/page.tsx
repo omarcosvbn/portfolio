@@ -1,11 +1,12 @@
+import Image from "next/image";
 import HomeButton from "./components/HomeButton/HomeButton";
 import styles from "./page.module.scss";
-import { Outfit } from 'next/font/google'
+import { Outfit } from "next/font/google";
 
 const outfit = Outfit({
-  subsets: ['latin'],
-  display: 'swap',
-})
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function Home() {
   return (
@@ -13,11 +14,15 @@ export default function Home() {
       <div className={`${outfit.className} ${styles.home}`}>
         <div className={styles.home__hi}>
           <div className={styles.home__hi__title}>
-            {/* <h1>Hi,</h1>
-            <h1>I</h1>
-            <h1>am</h1>
-            <h1>Marcos</h1> */}
-            <h1>Hi, I am Marcos</h1>
+            <picture>
+              <source media="(max-width: 768px)" srcSet="/hi/hi-mobile.svg" />
+              <source media="(max-width: 1440px)" srcSet="/hi/hi-tablet.svg" />
+              <img
+                src="/hi/hi-pc.svg"
+                alt="Hi, I am Marcos"
+
+              />
+            </picture>
           </div>
           <HomeButton
             label="projects"
