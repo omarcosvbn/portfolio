@@ -1,20 +1,41 @@
 .home__button {
   display: flex;
+  
+  &__button{
+    all: unset;
+    font-weight: 100;
+    font-size: 64pt;
+
+    cursor: pointer;
+  }
+
+  a, Link{
+    all:unset;
+    cursor: pointer;
+  }
+  
 }
 
-.btn {
+.btn {  
   &__clicked {
+    margin-left: 30px;
     display: flex;
+    align-items: center;
     gap: 30px;
+
+    font-weight: 100;
+    font-size: 64pt;
   }
   &__unclicked {
     display: none;
   }
+
+  
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background-color: white;
   border: 1px solid black;
