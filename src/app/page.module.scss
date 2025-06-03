@@ -9,6 +9,9 @@
     flex-direction: column;
     justify-content: space-between;
     &__hi {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
       &__title {
         width: 100%;
       }
@@ -31,7 +34,7 @@
     margin-left: 50px;
   margin-right: 50px;
     .home {
-      padding-top: 50px;
+      padding-top: 80px;
       &__hi {
         &__title {
         }

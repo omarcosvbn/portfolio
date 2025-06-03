@@ -38,17 +38,27 @@ export default function HomeButton({
       <div className={styles[classname]}>
         {setLink ? (
           <>
-            <div className={styles.dot}></div>
-            <Link href={setLink}>{link1}</Link>
-            <div className={styles.dot}></div>
-            <Link href={setLink}>{link2}</Link>
+            <div className={styles.link}>
+              <div className={styles.dot}></div>
+              <Link href={setLink}>{link1}</Link>
+            </div>
+            <div className={styles.link}>
+              <div className={styles.dot}></div>
+              <Link href={setLink}>{link2}</Link>
+            </div>
           </>
         ) : (
           <>
-            <div className={styles.dot}></div>
-            <a href="https://www.linkedin.com/in/marcos-bnascimento">{link1}</a>
-            <div className={styles.dot}></div>
-            <a href="mailto:your@email.com">{link2}</a>
+            <div className={styles.link}>
+              <div className={styles.dot}></div>
+              <a href="https://www.linkedin.com/in/marcos-bnascimento">
+                {link1}
+              </a>
+            </div>
+            <div className={styles.link}>
+              <div className={styles.dot}></div>
+              <a href="mailto:your@email.com">{link2}</a>
+            </div>
           </>
         )}
       </div>

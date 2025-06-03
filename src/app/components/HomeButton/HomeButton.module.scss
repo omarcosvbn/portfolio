@@ -1,7 +1,7 @@
 .home__button {
   display: flex;
-  
-  &__button{
+
+  &__button {
     all: unset;
     font-weight: 100;
     font-size: 64pt;
@@ -9,14 +9,14 @@
     cursor: pointer;
   }
 
-  a, Link{
-    all:unset;
+  a,
+  Link {
+    all: unset;
     cursor: pointer;
   }
-  
 }
 
-.btn {  
+.btn {
   &__clicked {
     margin-left: 30px;
     display: flex;
@@ -29,14 +29,59 @@
   &__unclicked {
     display: none;
   }
+}
 
-  
+.link {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 .dot {
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background-color: white;
-  border: 1px solid black;
+  border: 2px solid black;
+}
+
+@media only screen and (max-width: 1440px) {
+  .home__button {
+    flex-direction: column;
+    align-items: flex-start;
+    &__button {
+      font-size: 10vw;
+    }
+  }
+  .btn {
+    &__clicked {
+      margin-left: 0;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
+
+      font-weight: 100;
+      font-size: 6vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .btn {
+    &__clicked {
+      gap: 15px;
+      font-weight: 100;
+      font-size: 8vw;
+    }
+  }
+
+  .link {
+    gap: 15px;
+  }
+  .dot {
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+  }
 }

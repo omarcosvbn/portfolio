@@ -23,13 +23,15 @@ export default function Home() {
             />
           </picture>
 
-          <HomeButton
-            label="projects"
-            link1="case studies"
-            link2="personal"
-            setLink="/projects"
-          />
-          <HomeButton label="contacts" link1="linkedin" link2="email" />
+          <div className={styles.home__button}>
+            <HomeButton
+              label="projects"
+              link1="case studies"
+              link2="personal"
+              setLink="/projects"
+            />
+            <HomeButton label="contacts" link1="linkedin" link2="email" />
+          </div>
         </div>
         <div className={styles.home__about}>
           <p className={styles.home__about__text}>about me</p>
