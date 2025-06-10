@@ -1,4 +1,3 @@
-import Image from "next/image";
 import HomeButton from "./components/HomeButton/HomeButton";
 import styles from "./page.module.scss";
 import { Outfit } from "next/font/google";
@@ -22,7 +21,6 @@ export default function Home() {
               className={styles.home__hi__title}
             />
           </picture>
-
           <div className={styles.home__button}>
             <HomeButton
               label="projects"
@@ -30,7 +28,17 @@ export default function Home() {
               link2="personal"
               setLink="/projects"
             />
-            <HomeButton label="contacts" link1="linkedin" link2="email" />
+            <div className={styles.home__button__last}>
+              <HomeButton label="contacts" link1="linkedin" link2="email" />
+            </div>
+            <div className={styles.home__button__links}>
+              <a href="#" className={styles.home__button__links__link}>
+                Link 1
+              </a>
+              <a href="#" className={styles.home__button__links__link}>
+                Link 2
+              </a>
+            </div>
           </div>
         </div>
         <div className={styles.home__about}>
