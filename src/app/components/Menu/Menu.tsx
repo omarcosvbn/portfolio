@@ -9,8 +9,8 @@ export default function Menu() {
   const handleToggle = () => setIsOpen((prev) => !prev);
 
   return (
-    <div className={styles[isOpen ? "menu__open" : "menu__close"]}>
-      <div className={styles[isOpen ? "links__open" : "links__close"]}>
+    <div className={styles[isOpen ? "menu__close" : "menu__open"]}>
+      <div className={styles[isOpen ? "links__close" : "links__open"]}>
         <a>test</a>
         <a>test</a>
         <a>test</a>
