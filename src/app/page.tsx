@@ -1,6 +1,9 @@
-import HomeButton from "./components/HomeButton/HomeButton";
+"use client";
+
+import Link from "next/link";
 import styles from "./page.module.scss";
 import { Outfit } from "next/font/google";
+import { useState } from "react";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -8,42 +11,56 @@ const outfit = Outfit({
 });
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => setIsOpen((prev) => !prev);
+
   return (
     <div className={styles.page}>
       <div className={`${outfit.className} ${styles.home}`}>
-        <div className={styles.home__hi}>
+        <div className={styles.intro}>
           <picture>
-            <source media="(max-width: 768px)" srcSet="/hi/hi-mobile.svg" />
-            <source media="(max-width: 1440px)" srcSet="/hi/hi-tablet.svg" />
+            <source media="(min-width: 1030px)" srcSet="/hi/hi-pc.svg" />
+            <source media="(min-width: 768px)" srcSet="/hi/hi-tablet.svg" />
             <img
-              src="/hi/hi-pc.svg"
+              src="/hi/hi-mobile.svg"
               alt="Hi, I am Marcos"
-              className={styles.home__hi__title}
+              className={styles.intro__titleImage}
             />
           </picture>
-          <div className={styles.home__button}>
-            <HomeButton
-              label="projects"
-              link1="case studies"
-              link2="personal"
-              setLink="/projects"
-            />
-            <div className={styles.home__button__last}>
-              <HomeButton label="contacts" link1="linkedin" link2="email" />
-            </div>
-            <div className={styles.home__button__links}>
-              <a href="#" className={styles.home__button__links__link}>
-                Link 1
-              </a>
-              <a href="#" className={styles.home__button__links__link}>
-                Link 2
-              </a>
+
+          <div className={styles.projectMenu}>
+            <button
+              className={styles.projectMenu__toggle}
+              onClick={handleToggle}
+              aria-expanded={isOpen}
+            >
+              projects
+            </button>
+            <div
+              className={
+                styles[
+                  isOpen
+                    ? "projectMenu__dropdown--open"
+                    : "projectMenu__dropdown--closed"
+                ]
+              }
+            >
+              <Link href="/projects" className={styles.projectMenu__link}>
+                <div className={styles.projectMenu__linkDot}></div>
+                personal
+              </Link>
+              <Link href="/projects" className={styles.projectMenu__link}>
+                <div className={styles.projectMenu__linkDot}></div>
+                case studies
+              </Link>
             </div>
           </div>
         </div>
-        <div className={styles.home__about}>
-          <p className={styles.home__about__text}>about me</p>
-          <p className={styles.home__about__arrow}>seta</p>
+
+        <div className={styles.aboutSection}>
+          <p className={styles.aboutSection__label}>about me</p>
+          <p className={styles.aboutSection__arrow}>seta</p>
         </div>
       </div>
     </div>

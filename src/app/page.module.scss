@@ -1,93 +1,145 @@
 .page {
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-inline: 20px;
   .home {
     width: 100%;
-    height: 100vh;
-    padding-top: 70px;
+    height: 100dvh;
+    padding-top: 100px;
+    padding-bottom: 5vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    &__hi {
+
+    .intro {
       display: flex;
       flex-direction: column;
       gap: 50px;
-      &__title {
+
+      &__titleImage {
         width: 100%;
       }
     }
-    &__about {
+
+    .projectMenu {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      &__toggle {
+        all: unset;
+        font-weight: 100;
+        font-size: 8vw;
+        cursor: pointer;
+      }
+
+      &__dropdown--open {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        font-weight: 100;
+        font-size: 8vw;
+      }
+
+      &__dropdown--closed {
+        display: none;
+      }
+
+      &__link {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      &__linkDot {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: white;
+        border: 1px solid black;
+      }
+    }
+
+    .aboutSection {
       width: 100%;
       display: flex;
       justify-content: center;
       gap: 20px;
-    }
-    &__button {
-      width: 100%;
-      &__links {
-        display: none;
+
+      &__label {
+        // customize
+      }
+
+      &__arrow {
+        // customize
       }
     }
   }
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (min-width: 768px) {
   .page {
-    margin-left: 50px;
-    margin-right: 100px;
+    margin-inline: 50px;
+
     .home {
-      padding-top: 100px;
       padding-bottom: 5vh;
-      &__hi {
-        &__title {
+      padding-top: 100px;
+
+      .intro {
+        &__titleImage {
           width: 75%;
         }
       }
-      &__button {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        &__links {
-          display: flex;
-          gap: 20px;
-          &__link {
-            width: 100px;
-            height: 100px;
-            background-color: black;
-          }
+
+      .projectMenu {
+        &__toggle {
+          font-size: 10vw;
         }
-        &__last {
-          display: none;
+
+        &__dropdown--open {
+          gap: 10px;
+          font-size: 6vw;
         }
       }
     }
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 1030px) {
   .page {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-inline: 100px;
+
     .home {
-      padding-top: 50px;
-      padding-bottom: 15vh;
-      &__hi {
-        &__title {
+      padding-top: 70px;
+
+      .intro {
+        &__titleImage {
           width: 100%;
         }
       }
-      &__button {
 
-        flex-direction: column;
-        gap:20px;
-        &__links {
-          display: flex;
-          gap: 10px;
-          &__link {
-            width: 65px;
-            height: 65px;
-            background-color: black;
-          }
+      .projectMenu {
+        flex-direction: row;
+
+        &__toggle {
+          font-size: 5vw;
+        }
+
+        &__dropdown--open {
+          margin-left: 30px;
+          flex-direction: row;
+          gap: 30px;
+          font-size: 5vw;
+        }
+
+        &__link {
+          gap: 30px;
+        }
+
+        &__linkDot {
+          width: 20px;
+          height: 20px;
+          border: 2px solid black;
         }
       }
     }
