@@ -46,11 +46,11 @@ export default function Home() {
                 ]
               }
             >
-              <Link href="/projects" className={styles.projectMenu__link}>
+              <Link href="/projects?filter=personal" className={styles.projectMenu__link}>
                 <div className={styles.projectMenu__linkDot}></div>
                 personal
               </Link>
-              <Link href="/projects" className={styles.projectMenu__link}>
+              <Link href="/projects?filter=case-studies" className={styles.projectMenu__link}>
                 <div className={styles.projectMenu__linkDot}></div>
                 case studies
               </Link>
