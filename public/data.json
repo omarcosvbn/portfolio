@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Portfolio Website",
+    "image": "/projects/portfolio.png",
+    "description": "A personal portfolio website to showcase my projects and skills.",
+    "technologies": "HTML, CSS, JavaScript, React",
+    "type": "Web Development"
+  },
+  {
+    "id": 2,
+    "title": "Mobile Expense Tracker",
+    "image": "/projects/expense-tracker.png",
+    "description": "A cross-platform mobile app for tracking daily expenses with cloud sync.",
+    "technologies": "Flutter, Dart, Firebase",
+    "type": "Mobile App"
+  },
+  {
+    "id": 3,
+    "title": "E-commerce Backend",
+    "image": "/projects/ecommerce-backend.png",
+    "description": "A RESTful API backend to manage products, users, and orders for an e-commerce platform.",
+    "technologies": "Node.js, Express, MongoDB",
+    "type": "Backend API"
+  },
+  {
+    "id": 4,
+    "title": "AI Image Classifier",
+    "image": "/projects/image-classifier.png",
+    "description": "A machine learning model to classify images using a convolutional neural network.",
+    "technologies": "Python, TensorFlow, Keras",
+    "type": "Machine Learning"
+  },
+  {
+    "id": 5,
+    "title": "Real-Time Chat App",
+    "image": "/projects/chat-app.png",
+    "description": "A full-stack chat application with real-time messaging using WebSockets.",
+    "technologies": "React, Socket.io, Node.js",
+    "type": "Full Stack"
+  }
+]
