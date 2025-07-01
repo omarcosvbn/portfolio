@@ -1,16 +1,8 @@
-.return{
-  width: 48px;
-  height: 48px;
-  background-color: black;
-  position: fixed;
-  top: 25px;
-  left: 25px;
-}
-
-.menu{
-  &__open{
+.menu {
+  &__open {
   }
-  &__close{
+  &__close {
+    z-index: 99;
     width: 100vw;
     height: 100dvh;
     position: fixed;
@@ -19,20 +11,22 @@
 }
 
 .button {
+  z-index: 100;
   position: fixed;
   width: 48px;
   height: 48px;
-  right: 25px;
-  top: 25px;
+  right: 20px;
+  top: 20px;
   background-color: black;
   color: white;
+  cursor: pointer;
 }
 
 .links {
   &__open {
     display: none;
   }
-  
+
   &__close {
     width: 100vw;
     height: 100dvh;

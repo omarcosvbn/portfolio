@@ -1,6 +1,21 @@
-.page{
-  padding-top: 100px;
+.page {
   margin-inline: 20px;
+}
+
+.return {
+  width: 48px;
+  height: 48px;
+  background-color: black;
+  margin-bottom: 25px;
+}
+
+.nav {
+  top: 0;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  position: sticky;
+  background-color: white;
+  z-index: 0;
 }
 
 .projectImage {
@@ -9,4 +24,88 @@
   height: auto;
   border-radius: 12px;
   margin-bottom: 20px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.projectsButton {
+  all: unset;
+  cursor: pointer;
+  font-weight: 100;
+  font-size: 20pt;
+}
+
+.filterButtons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 100;
+  font-size: 24pt;
+}
+
+.filterButton {
+  all: unset;
+  cursor: pointer;
+}
+
+.images {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.projectImage {
+  width: 100%;
+  height: auto;
+  background-color: black;
+}
+
+@media only screen and (min-width: 768px) {
+  .images {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .projectImage {
+    width: 40%;
+    justify-items: flex-start;
+  }
+
+  .projectsButton {
+    font-size: 26pt;
+  }
+
+  .filterButton {
+    font-size: 40pt;
+  }
+
+  .dot {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media only screen and (min-width: 1030px) {
+  .projectsButton {
+    font-size: 30pt;
+  }
+
+  .filterButton {
+    font-size: 46pt;
+  }
+
+  .dot {
+    width: 15px;
+    height: 15px;
+  }
 }

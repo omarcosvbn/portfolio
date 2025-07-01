@@ -2,7 +2,9 @@
 
 import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { Outfit } from "next/font/google";
 import styles from "./page.module.scss";
+import Link from "next/link";
 
 type ProjectData = {
   id: number;
@@ -12,6 +14,11 @@ type ProjectData = {
   technologies: string;
   type: string; // "personal" | "case-study"
 };
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function ProjectsPage() {
   const searchParams = useSearchParams();
@@ -29,32 +36,44 @@ export default function ProjectsPage() {
     ? projects.filter((p) => p.type === filter)
     : projects;
 
-
   const handleFilterChange = (type: string | null) => {
     const query = type ? `?filter=${type}` : "";
     router.push(`/projects${query}`);
   };
 
   return (
-    <div className={styles.page}>
-      <h1>Projects</h1>
-
-      <div className={styles.filterButtons}>
-        <button onClick={() => handleFilterChange("personal")}>
-          personal
+    <div className={`${outfit.className} ${styles.page}`}>
+      <div className={styles.nav}>
+        <Link href="/">
+          <div className={styles.return}></div>
+        </Link>
+        <button
+          className={styles.projectsButton}
+          onClick={() => handleFilterChange(null)}
+        >
+          projects
         </button>
-        <button onClick={() => handleFilterChange("case-studies")}>
-          case studies
-        </button>
-        <button onClick={() => handleFilterChange(null)}>
-          all
-        </button>
+        <div className={styles.filterButtons}>
+          <button
+            className={styles.filterButton}
+            onClick={() => handleFilterChange("case-studies")}
+          >
+            case studies
+          </button>
+          <div className={styles.dot}></div>
+          <button
+            className={styles.filterButton}
+            onClick={() => handleFilterChange("personal")}
+          >
+            personal
+          </button>
+        </div>
       </div>
 
       {projects.length === 0 ? (
         <p>Loading...</p>
       ) : (
-        <>
+        <div className={styles.images}>
           {filteredProjects.length > 0 ? (
             filteredProjects.map((p) => (
               <img
@@ -67,7 +86,7 @@ export default function ProjectsPage() {
           ) : (
             <p>No projects found for "{filter}"</p>
           )}
-        </>
+        </div>
       )}
     </div>
   );
