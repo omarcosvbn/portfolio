@@ -18,12 +18,19 @@
   z-index: 0;
 }
 
-.projectImage {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
+.projectLink {
+  display: inline-block;
+  width: fit-content;
   border-radius: 12px;
-  margin-bottom: 20px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.projectImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 400px;
 }
 
 .dot {
@@ -74,11 +81,6 @@
   .images {
     flex-direction: row;
     flex-wrap: wrap;
-  }
-
-  .projectImage {
-    width: 40%;
-    justify-items: flex-start;
   }
 
   .projectsButton {

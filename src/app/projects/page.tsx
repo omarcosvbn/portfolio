@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Outfit } from "next/font/google";
 import styles from "./page.module.scss";
 import Link from "next/link";
+import data from "@/app/data/data.json"; // direct import
 
 type ProjectData = {
   id: number;
@@ -24,13 +25,9 @@ export default function ProjectsPage() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const filter = searchParams.get("filter");
-  const [projects, setProjects] = useState<ProjectData[]>([]);
 
-  useEffect(() => {
-    fetch("/data.json")
-      .then((res) => res.json())
-      .then(setProjects);
-  }, []);
+  // State is no longer needed unless you plan to mutate projects
+  const projects: ProjectData[] = data;
 
   const filteredProjects = filter
     ? projects.filter((p) => p.type === filter)
@@ -70,22 +67,23 @@ export default function ProjectsPage() {
         </div>
       </div>
 
-      {projects.length === 0 ? (
-        <p>Loading...</p>
+      {filteredProjects.length === 0 ? (
+        <p>No projects found for "{filter}"</p>
       ) : (
         <div className={styles.images}>
-          {filteredProjects.length > 0 ? (
-            filteredProjects.map((p) => (
+          {filteredProjects.map((p) => (
+            <Link
+              className={styles.projectLink}
+              key={p.id}
+              href={`/projects/${p.id}`}
+            >
               <img
-                key={p.id}
                 src={p.image}
                 alt={p.title}
                 className={styles.projectImage}
               />
-            ))
-          ) : (
-            <p>No projects found for "{filter}"</p>
-          )}
+            </Link>
+          ))}
         </div>
       )}
     </div>
