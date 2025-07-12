@@ -34,7 +34,7 @@ export default function Page({ params }: { params: { id: string } }) {
   return (
     <div className={`${outfit.className} ${styles.page}`}>
       <div className={styles.nav}>
-        <Link href="/projects">
+        <Link href="/projects" className={styles.returnButton}>
           <div className={styles.return}></div>
         </Link>
       </div>
