@@ -1,11 +1,10 @@
 "use client";
 
 import { useSearchParams, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
 import { Outfit } from "next/font/google";
 import styles from "./page.module.scss";
 import Link from "next/link";
-import data from "@/app/data/data.json"; // direct import
+import data from "@/app/data/data.json";
 
 type ProjectData = {
   id: number;
@@ -13,7 +12,7 @@ type ProjectData = {
   image: string;
   description: string;
   technologies: string;
-  type: string; // "personal" | "case-study"
+  type: string; 
 };
 
 const outfit = Outfit({
@@ -26,7 +25,6 @@ export default function ProjectsPage() {
   const router = useRouter();
   const filter = searchParams.get("filter");
 
-  // State is no longer needed unless you plan to mutate projects
   const projects: ProjectData[] = data;
 
   const filteredProjects = filter

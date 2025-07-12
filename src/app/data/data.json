@@ -3,40 +3,24 @@
     "id": 1,
     "title": "Portfolio Website",
     "image": "https://dummyimage.com/600x350/000/fff",
-    "description": "A personal portfolio website to showcase my projects and skills.",
-    "technologies": "HTML, CSS, JavaScript, React",
+    "description": "The website you are seeing right now, showcasing my projects and skills.",
+    "technologies": "HTML, SCSS, TypeScript, React",
     "type": "personal"
   },
   {
     "id": 2,
-    "title": "Mobile Expense Tracker",
+    "title": "Meteora",
     "image": "https://dummyimage.com/600x350/000/fff",
-    "description": "A cross-platform mobile app for tracking daily expenses with cloud sync.",
-    "technologies": "Flutter, Dart, Firebase",
+    "description": "Meteora is a fictional web store created for educational purposes. Its key features include the use of reusable components, button-based filtering, a search bar, API fetching, and responsive design.",
+    "technologies": "HTML, SCSS, TypeScript, React",
     "type": "case-studies"
   },
   {
     "id": 3,
-    "title": "E-commerce Backend",
+    "title": "Alfabit Design System",
     "image": "https://dummyimage.com/600x350/000/fff",
-    "description": "A RESTful API backend to manage products, users, and orders for an e-commerce platform.",
-    "technologies": "Node.js, Express, MongoDB",
-    "type": "personal"
-  },
-  {
-    "id": 4,
-    "title": "AI Image Classifier",
-    "image": "https://dummyimage.com/600x350/000/fff",
-    "description": "A machine learning model to classify images using a convolutional neural network.",
-    "technologies": "Python, TensorFlow, Keras",
+    "description": "Alfabit is an innovative technology company dedicated to providing creative and efficient solutions for its clients. Recognizing the importance of consistent and intuitive design across all its platforms and products, Alfabit decided to invest in a cutting-edge design system. This design system serves as a comprehensive guide for the company's design and development teams, ensuring that all digital products maintain a cohesive look and feel while enhancing user experience.",
+    "technologies": "HTML, SCSS, TypeScript, React, Storybook",
     "type": "case-studies"
-  },
-  {
-    "id": 5,
-    "title": "Real-Time Chat App",
-    "image": "https://dummyimage.com/600x350/000/fff",
-    "description": "A full-stack chat application with real-time messaging using WebSockets.",
-    "technologies": "React, Socket.io, Node.js",
-    "type": "personal"
   }
 ]

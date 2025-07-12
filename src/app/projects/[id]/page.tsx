@@ -1,6 +1,17 @@
 import styles from "./page.module.scss";
 import Link from "next/link";
 import data from "@/app/data/data.json";
+import { Outfit } from "next/font/google";
+import { Aleo } from "next/font/google";
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  display: "swap",
+});
+const aleo = Aleo({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function Page({ params }: { params: { id: string } }) {
   const id = Number(params.id);
@@ -21,7 +32,7 @@ export default function Page({ params }: { params: { id: string } }) {
   }
 
   return (
-    <div className={styles.page}>
+    <div className={`${outfit.className} ${styles.page}`}>
       <div className={styles.nav}>
         <Link href="/projects">
           <div className={styles.return}></div>
@@ -30,11 +41,11 @@ export default function Page({ params }: { params: { id: string } }) {
       <div className={styles.projectDetails}>
         <img src={image} alt={title} className={styles.projectImage} />
         <div className={styles.projectInfo}>
-          <h1>{title}</h1>
-          <p>{technologies}</p>
+          <h1 className={styles.projectTitle}>{title}</h1>
+          <p className={styles.projectTechnologies}>{technologies}</p>
         </div>
       </div>
-      <p>{description}</p>
+      <p className={`${aleo.className} ${styles.projectDescription}`}>{description}</p>
     </div>
   );
 }
