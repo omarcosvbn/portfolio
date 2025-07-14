@@ -9,10 +9,9 @@ import data from "@/app/data/data.json";
 type ProjectData = {
   id: number;
   title: string;
+  link: string;
   image: string;
-  description: string;
-  technologies: string;
-  type: string; 
+  type: string;
 };
 
 const outfit = Outfit({
@@ -70,17 +69,13 @@ export default function ProjectsPage() {
       ) : (
         <div className={styles.images}>
           {filteredProjects.map((p) => (
-            <Link
-              className={styles.projectLink}
-              key={p.id}
-              href={`/projects/${p.id}`}
-            >
+            <a href={p.link} rel="noreferrer" target="_blank">
               <img
                 src={p.image}
                 alt={p.title}
                 className={styles.projectImage}
               />
-            </Link>
+            </a>
           ))}
         </div>
       )}
