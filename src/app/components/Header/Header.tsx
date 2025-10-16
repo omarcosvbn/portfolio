@@ -2,11 +2,14 @@
 
 import styles from "./Header.module.scss";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -17,7 +20,7 @@ export default function Header() {
   };
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${!isHome ? styles.notHomeDesktop : ""}`}>
       <button onClick={handleClick} className={styles.menu}>
         <img
           src={isOpen ? "/close.webp" : "/open.webp"}

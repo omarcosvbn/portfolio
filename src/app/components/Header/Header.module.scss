@@ -9,23 +9,13 @@
   padding-right: 15px;
 }
 
-.h1 {
-    display: block;
-    font-size: 40px;
-}
-
-.title {
-    display: none;
-    font-size: 40px;
-}
-
 .menu {
   all: unset;
   width: fit-content;
   height: auto;
   background-color: none;
-  z-index: 100;
   display: none;
+  z-index: 100;
 }
 
 .image {
@@ -72,15 +62,17 @@
     padding-left: 25px;
   }
 
-  .menu {
-    display: block;
-  }
+.menu{
+  display: block;
+}
 
   .h1 {
     display: none;
   }
+}
 
-  .title {
+@media (min-width: 1111px) {
+  .notHomeDesktop .menu {
     display: block;
   }
 }
