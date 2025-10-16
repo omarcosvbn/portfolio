@@ -11,9 +11,29 @@ export default function Home() {
           ))}
         </div>
         <div className={styles.links}>
-          <Link href={"/projects"}>projects</Link>
-          <a href="https://www.linkedin.com/in/marcos-bnascimento/">linkedin</a>
-          <a href="https://github.com/omarcosvbn">github</a>
+          <div className={styles.link}>
+            <Link href={"/projects"}>projects</Link>
+            <img
+              src="https://placehold.co/100x10"
+              className={styles.underline}
+            />
+          </div>
+          <div className={styles.link}>
+            <a href="https://www.linkedin.com/in/marcos-bnascimento/">
+              linkedin
+            </a>
+            <img
+              src="https://placehold.co/100x10"
+              className={styles.underline}
+            />
+          </div>
+          <div className={styles.link}>
+            <a href="https://github.com/omarcosvbn">github</a>
+            <img
+              src="https://placehold.co/100x10"
+              className={styles.underline}
+            />
+          </div>
         </div>
       </div>
     </div>

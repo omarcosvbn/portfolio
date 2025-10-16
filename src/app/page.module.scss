@@ -26,5 +26,19 @@
   .links {
     display: flex;
     gap: 40px;
+
+    .link{
+        display: flex;
+        flex-direction: column;
+        
+        .underline {
+          clip-path: inset(0 100% 0 0);
+          transition: clip-path 0.3s ease;
+        }
+        
+        &:hover .underline {
+          clip-path: inset(0 0% 0 0);
+        }
+    }
   }
 }
