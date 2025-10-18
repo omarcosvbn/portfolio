@@ -31,7 +31,7 @@ export default function Header() {
       </Link>
       <button onClick={handleClick} className={styles.menu}>
         <img
-          src={isOpen ? "/close.webp" : "/open.webp"}
+          src={isOpen ? "https://placehold.co/50x50" : "https://placehold.co/50x50"}
           className={styles.image}
         />
       </button>

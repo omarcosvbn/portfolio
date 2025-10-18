@@ -3,12 +3,11 @@
 import styles from "./projects.module.scss";
 import projectsData from "../../projects.json";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Projects() {
   return (
     <div className={styles.page}>
-      <h1>projects</h1>
+      <h1 className={styles.title}>projects</h1>
       <div className={styles.projectsGrid}>
         {projectsData.map((project) => (
           <Link
