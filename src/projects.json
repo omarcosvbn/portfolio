@@ -3,39 +3,43 @@
     "id": 1,
     "title": "E-commerce Platform",
     "subtitle": "Full-stack web application with React and Node.js",
+    "thumbnail": "https://placehold.co/300x200",
     "images": [
-      "/images/project1-1.jpg",
-      "/images/project1-2.jpg",
-      "/images/project1-3.jpg"
+      "https://placehold.co/300x200",
+      "https://placehold.co/300x200",
+      "https://placehold.co/300x200"
     ]
   },
   {
     "id": 2,
     "title": "Mobile Banking App",
     "subtitle": "Secure mobile application for financial transactions",
+    "thumbnail": "https://placehold.co/300x200",
     "images": [
-      "/images/project2-1.jpg",
-      "/images/project2-2.jpg"
+      "https://placehold.co/300x200",
+      "https://placehold.co/300x200"
     ]
   },
   {
     "id": 3,
     "title": "Data Visualization Dashboard",
     "subtitle": "Interactive dashboard for business analytics",
+    "thumbnail": "https://placehold.co/300x200",
     "images": [
-      "/images/project3-1.jpg",
-      "/images/project3-2.jpg",
-      "/images/project3-3.jpg",
-      "/images/project3-4.jpg"
+      "https://placehold.co/300x200",
+      "https://placehold.co/300x200",
+      "https://placehold.co/300x200",
+      "https://placehold.co/300x200"
     ]
   },
   {
     "id": 4,
     "title": "Social Media API",
     "subtitle": "RESTful API service for social networking features",
+    "thumbnail": "https://placehold.co/300x200",
     "images": [
-      "/images/project4-1.jpg",
-      "/images/project4-2.jpg"
+      "https://placehold.co/300x200",
+      "https://placehold.co/300x200"
     ]
   }
 ]

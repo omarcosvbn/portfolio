@@ -4,9 +4,13 @@
   height: 100px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding-left: 35px;
+  justify-content: space-between;
+  padding-left: 15px;
   padding-right: 15px;
+
+  &:not(.notHomeDesktop) {
+    justify-content: flex-end;
+  }
 }
 
 .menu {
@@ -57,11 +61,11 @@
   }
 }
 
-@media (max-width: 1110px) {
-  .header {
-    padding-left: 25px;
-  }
+.notProjects{
+  display: none;
+}
 
+@media (max-width: 1110px) {
 .menu{
   display: block;
 }
