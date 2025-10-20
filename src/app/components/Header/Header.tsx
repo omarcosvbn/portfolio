@@ -23,15 +23,14 @@ export default function Header() {
     <header
       className={`${styles.header} ${!isHome ? styles.notHomeDesktop : ""}`}
     >
-      <Link
-        href="/"
-        className={!isProjects ? styles.notProjects : ""}
-      >
+      <Link href="/" className={!isProjects ? styles.notProjects : ""}>
         <img src="https://placehold.co/50x50" />
       </Link>
       <button onClick={handleClick} className={styles.menu}>
         <img
-          src={isOpen ? "https://placehold.co/50x50" : "https://placehold.co/50x50"}
+          src={
+            isOpen ? "https://placehold.co/50x50" : "https://placehold.co/50x50"
+          }
           className={styles.image}
         />
       </button>
@@ -44,17 +43,12 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <a
-              href="https://www.linkedin.com/in/marcos-bnascimento/"
-              onClick={handleCloseMenu}
-            >
-              linkedin
-            </a>
-          </li>
-          <li>
             <a href="https://github.com/omarcosvbn" onClick={handleCloseMenu}>
               github
             </a>
+          </li>
+          <li>
+            <a href="mailto:omarcosvbn@gmail.com">omarcosvbn@gmail.com</a>
           </li>
         </ul>
       </nav>
