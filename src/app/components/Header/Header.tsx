@@ -4,6 +4,7 @@ import styles from "./Header.module.scss";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { useRouter } from 'next/navigation';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,13 +20,15 @@ export default function Header() {
     setIsOpen(false);
   };
 
+  const router = useRouter();
+
   return (
     <header
       className={`${styles.header} ${!isHome ? styles.notHomeDesktop : ""}`}
     >
-      <Link href="/" className={!isProjects ? styles.notProjects : ""}>
-        <img src="https://placehold.co/50x50" />
-      </Link>
+      <p onClick={() => router.back()} className={!isProjects ? styles.notProjects : ""}>
+        Back
+      </p>
       <button onClick={handleClick} className={styles.menu}>
         <img
           src={
