@@ -25,28 +25,24 @@ export default function ProjectDetail() {
 
   return (
     <div className={styles.page}>
-      <div className={styles.container}>
-        <Link href="/projects" className={styles.backButton}>
-          Back to projects
-        </Link>
-
-        <div className={styles.projectHeader}>
-          <img src={project.thumbnail} />
+      <div className={styles.projectHeader}>
+        <img src={project.thumbnail} />
+        <div className={styles.info}>
           <h1>{project.title}</h1>
           <p className={styles.subtitle}>{project.subtitle}</p>
         </div>
+      </div>
 
-        <div className={styles.imageGallery}>
-          {project.images.map((image, index) => (
-            <img
-              src={image}
-              alt={`${project.title} - Image ${index + 1}`}
-              width={800}
-              height={600}
-              className={styles.projectImage}
-            />
-          ))}
-        </div>
+      <div className={styles.imageGallery}>
+        {project.images.map((image, index) => (
+          <img
+            src={image}
+            alt={`${project.title} - Image ${index + 1}`}
+            width={800}
+            height={600}
+            className={styles.projectImage}
+          />
+        ))}
       </div>
     </div>
   );

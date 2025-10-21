@@ -1,5 +1,20 @@
 .page{
+    width: 75dvw;
+    max-width: 1200px;
     padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.projectHeader{
+    display: flex;
+    gap: 40px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
 }
 
 .imageGallery{
