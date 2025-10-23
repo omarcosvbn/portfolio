@@ -15,11 +15,14 @@
   padding-right: 50px;
 
   .hello {
+    width: 100%;
     display: flex;
+    justify-content: center;
 
     .image {
-      width: 100%;
+      width: 80dvw;
       height: auto;
+      max-width: 1400px;      
     }
   }
 
@@ -53,6 +56,12 @@
 
 @media (max-width: 1110px) {
   .mainPage {
+    .hello{
+      .image{
+        width: 60dvw;
+      }
+    }
+
     .links {
       display: none;
     }

@@ -20,6 +20,28 @@
   background-color: none;
   display: none;
   z-index: 100;
+  cursor: pointer;
+}
+
+.backButton {
+  all: unset;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+
+  img {
+    width: 100px;
+  }
+
+  .underline {
+    clip-path: inset(0 0 0 100%);
+    transition: clip-path 0.3s ease;
+  }
+
+  &:hover .underline {
+    clip-path: inset(0 0 0 0%);
+  }
 }
 
 .image {
@@ -61,14 +83,14 @@
   }
 }
 
-.notProjects{
+.notProjects {
   display: none;
 }
 
 @media (max-width: 1110px) {
-.menu{
-  display: block;
-}
+  .menu {
+    display: block;
+  }
 
   .h1 {
     display: none;

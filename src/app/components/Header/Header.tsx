@@ -26,13 +26,14 @@ export default function Header() {
     <header
       className={`${styles.header} ${!isHome ? styles.notHomeDesktop : ""}`}
     >
-      <p onClick={() => router.back()} className={!isProjects ? styles.notProjects : ""}>
-        Back
-      </p>
+      <button onClick={() => router.back()} className={`${styles.backButton} ${!isProjects ? styles.notProjects : ""}`}>
+        <img src="/back-button.webp"/>
+        <img src="/back-arrow.webp" className={styles.underline} />
+      </button>
       <button onClick={handleClick} className={styles.menu}>
         <img
           src={
-            isOpen ? "https://placehold.co/50x50" : "https://placehold.co/50x50"
+            isOpen ? "/close.webp" : "open.webp"
           }
           className={styles.image}
         />
