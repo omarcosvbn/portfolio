@@ -12,7 +12,6 @@ export default function Home() {
               hi-mobile.webp 1100w,
               hi-desktop.webp 1101w 
             "
-
             alt="Hi, I am Marcos"
             className={styles.image}
           />

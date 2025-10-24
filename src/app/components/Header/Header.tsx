@@ -4,7 +4,7 @@ import styles from "./Header.module.scss";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,15 +26,18 @@ export default function Header() {
     <header
       className={`${styles.header} ${!isHome ? styles.notHomeDesktop : ""}`}
     >
-      <button onClick={() => router.back()} className={`${styles.backButton} ${!isProjects ? styles.notProjects : ""}`}>
-        <img src="/back-button.webp"/>
+      <button
+        onClick={() => router.back()}
+        className={`${styles.backButton} ${
+          !isProjects ? styles.notProjects : ""
+        }`}
+      >
+        <img src="/back-button.webp" />
         <img src="/back-arrow.webp" className={styles.underline} />
       </button>
       <button onClick={handleClick} className={styles.menu}>
         <img
-          src={
-            isOpen ? "/close.webp" : "open.webp"
-          }
+          src={isOpen ? "/close.webp" : "open.webp"}
           className={styles.image}
         />
       </button>

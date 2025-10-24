@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header/Header";
+import localFont from "next/font/local";
 
-const outfit = Outfit({
-  subsets: ["latin"],
-  variable: "--font-outfit",
-  weight: ["100"],
+const ramona = localFont({
+  src: "../../public/fonts/Ramona-Light.ttf",
 });
-
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -22,8 +19,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={outfit.variable}>
-        <Header/>
+      <body className={ramona.className}>
+        <Header />
         {children}
       </body>
     </html>
