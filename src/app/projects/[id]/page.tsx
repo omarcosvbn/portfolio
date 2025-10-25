@@ -41,6 +41,7 @@ export default function ProjectDetail() {
             width={800}
             height={600}
             className={styles.projectImage}
+            key={index}
           />
         ))}
       </div>

@@ -5,6 +5,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,13 +33,16 @@ export default function Header() {
           !isProjects ? styles.notProjects : ""
         }`}
       >
-        <img src="/back-button.webp" />
-        <img src="/back-arrow.webp" className={styles.underline} />
+        <Image src="/back-button.webp" alt={"Back button"} width={100} height={40}/>
+        <Image src="/back-arrow.webp" className={styles.underline} alt={"Back button"} width={100} height={16}/>
       </button>
       <button onClick={handleClick} className={styles.menu}>
-        <img
-          src={isOpen ? "/close.webp" : "open.webp"}
+        <Image
+          src={isOpen ? "/close.webp" : "/open.webp"}
           className={styles.image}
+          alt={isOpen ? "Close button" : "Open button"}
+          width={42}
+          height={42}
         />
       </button>
 
